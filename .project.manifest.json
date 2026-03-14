@@ -1,0 +1,125 @@
+{
+  "kind": "git_asset.project_manifest.v1",
+  "project_id": "git_asset",
+  "scope": "self_contained_scaffold_archive",
+  "authority": {
+    "primary_surface": "extracted_workspace",
+    "runtime_install_required_by_default": false,
+    "notes": [
+      "Treat the uploaded archive and its extracted workspace as the primary review surface.",
+      "Do not assume a project runtime exists unless the task explicitly requires it.",
+      "This repo packages a shared scaffold, plan artifacts, and a vendored asset-control-model reference surface for self-contained git archives."
+    ]
+  },
+  "paths": {
+    "root": ".",
+    "workspace_docs": ".workspace/docs",
+    "build_script": ".workspace/scripts/build_overrides.sh",
+    "review_instructions": ".workspace/docs/review_workspace_instructions.md",
+    "review_templates": ".workspace/templates/reviews",
+    "manifest_templates": ".workspace/templates/manifests",
+    "asset_control_model": "ops/control_plane/dom0/asset-control-model",
+    "plan_root": "PLAN"
+  },
+  "priority_assets": {
+    "entrypoint_files": [
+      ".project.manifest.json",
+      "AGENTS.md"
+    ],
+    "workspace_dirs": [
+      ".workspace"
+    ],
+    "top_level_project_dirs": [
+      "ops",
+      "PLAN"
+    ],
+    "extra_paths": []
+  },
+  "scaffold": {
+    "generated_files": [
+      "AGENTS.md",
+      ".workspace/templates/reviews/git_asset.review.schema.json",
+      ".workspace/templates/reviews/review.schema.json",
+      ".workspace/templates/reviews/review.json.template"
+    ],
+    "idempotent": true
+  },
+  "agent_contract": {
+    "required_behavior": [
+      "read .workspace/docs/review_workspace_instructions.md for the full review workflow and output contract",
+      "regenerate scaffolded files with .workspace/scripts/build_overrides.sh after scaffold or manifest changes",
+      "use the project review contract under .workspace/templates/reviews",
+      "treat ops/control_plane/dom0/asset-control-model as vendored reference material for self-contained planning and archive output"
+    ]
+  },
+  "review_rules": {
+    "full_review_in_chat_ui": false,
+    "write_artifacts_to_internal_mnt": true,
+    "archive_outputs_in_mnt": true,
+    "ui_response_mode": "link_only_with_minimal_status",
+    "machine_readable_first": true,
+    "validate_against_schema_before_finalize": true,
+    "findings_order": "severity_desc",
+    "separate_verified_execution_from_inference": true,
+    "do_not_overclaim_coverage": true
+  },
+  "execution_states": [
+    "passed",
+    "partial",
+    "failed",
+    "not_executed",
+    "not_selected"
+  ],
+  "schema_contract": {
+    "generic_base_schema": ".workspace/templates/reviews/artifact_review.schema.json",
+    "project_profile_schema": ".workspace/templates/reviews/git_asset.review.schema.json",
+    "compatibility_schema": ".workspace/templates/reviews/review.schema.json",
+    "project_template": ".workspace/templates/reviews/review.json.template",
+    "profile_schema_id": "https://fatb4f.github.io/git_asset/schemas/git_asset.review.schema.json",
+    "compatibility_schema_id": "https://fatb4f.github.io/git_asset/schemas/review.schema.json",
+    "profile_title": "Git Asset Artifact Review Profile",
+    "project_review_kind": "git_asset.artifact_review.v1",
+    "artifact_name_pattern": "^git_asset-.*\\.zip$"
+  },
+  "review_template": {
+    "artifact_review": {
+      "kind": "git_asset.artifact_review.v1",
+      "metadata": {
+        "artifact_name": "git_asset-main.zip",
+        "review_pass": 1,
+        "assessment": "initial_scaffold_review"
+      },
+      "execution_context": {
+        "can_run_end_to_end_here": false,
+        "blocking_reason": "runtime_unavailable",
+        "checked": [
+          "archive_unpacked"
+        ]
+      },
+      "summary": {
+        "overall": "scaffold_initialized",
+        "maturity": "seeded",
+        "main_remaining_risk": "plan_not_yet_executed"
+      },
+      "finding_summary": {
+        "confirmed_fix_count": 0,
+        "open_finding_count": 0,
+        "severity_counts": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "confirmed_fixes": [],
+      "findings": [],
+      "verdict": {
+        "status": "needs_review",
+        "reasons": [
+          "populate_from_actual_review"
+        ]
+      },
+      "next_patch_set": []
+    }
+  }
+}

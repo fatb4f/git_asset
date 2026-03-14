@@ -1,0 +1,11 @@
+{
+  "kind": "plan.packet.meta.v1",
+  "objective": "Package git_asset as a self-contained scaffold archive with manifest-backed review assets and vendored asset-control-model references",
+  "failure_signatures": [
+    "git_asset has no committed project manifest or generated review assets",
+    "external asset-control-model references would be lost from a plain git archive"
+  ],
+  "wt": "/home/_404/src/git_asset_worktree",
+  "packet_path": "/home/_404/src/git_asset_worktree/PLAN/README.md",
+  "mode": "full"
+}
