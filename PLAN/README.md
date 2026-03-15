@@ -397,7 +397,7 @@ Output:
 - Evidence required: planned evidence gates are listed below and remain pending until implementation approval
 | Deliverable ID | Evidence required | Proof ref | Status (pending|met|blocked) |
 |---|---|---|---|
-| A1 | D0 workflow spec, integration repo contract, objective register, semantic analysis, dependency/gap analysis, and canonical objective order exist | `/home/_404/src/git_asset_worktree/PLAN/assets/objective_analysis_pipeline.json`; `/home/_404/src/git_asset_worktree/PLAN/assets/real_problem_set.json` | pending |
+| A1 | D0 workflow spec, integration repo contract, objective register, semantic analysis, and canonical objective order exist | `/home/_404/src/git_asset_worktree/PLAN/assets/objective_analysis_pipeline.json`; `/home/_404/src/git_asset_worktree/PLAN/assets/real_problem_set.json` | pending |
 | A2 | each ordered objective has named micro-deliverable sets | `/home/_404/src/git_asset_worktree/PLAN/assets/objective_analysis_pipeline.json` | pending |
 | A3 | each micro-deliverable set has semantic analysis and dependency/gap analysis artifacts | `/home/_404/src/git_asset_worktree/PLAN/assets/objective_analysis_pipeline.json` | pending |
 | A4 | last-round set-analysis artifacts are accepted as direct inputs to the PLAN skill | `/home/_404/src/git_asset_worktree/PLAN/assets/objective_analysis_pipeline.json` | pending |
