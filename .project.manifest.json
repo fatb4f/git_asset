@@ -1,14 +1,15 @@
 {
   "kind": "git_asset.project_manifest.v1",
   "project_id": "git_asset",
-  "scope": "self_contained_scaffold_archive",
+  "scope": "bundled_coupled_repo_archive",
   "authority": {
     "primary_surface": "extracted_workspace",
     "runtime_install_required_by_default": false,
     "notes": [
       "Treat the uploaded archive and its extracted workspace as the primary review surface.",
       "Do not assume a project runtime exists unless the task explicitly requires it.",
-      "This repo packages a shared scaffold, plan artifacts, and a vendored asset-control-model reference surface for self-contained git archives."
+      "This repo packages a shared scaffold, plan artifacts, and bundled external repo data for archive handoff.",
+      "Bundled external repo data currently includes asset-control-model and polyrepo_workspace."
     ]
   },
   "paths": {
@@ -19,7 +20,9 @@
     "review_templates": ".workspace/templates/reviews",
     "manifest_templates": ".workspace/templates/manifests",
     "asset_control_model": "ops/control_plane/dom0/asset-control-model",
-    "plan_root": "PLAN"
+    "polyrepo_workspace": "polyrepo_workspace",
+    "plan_root": "PLAN",
+    "implement_root": "IMPLEMENT"
   },
   "priority_assets": {
     "entrypoint_files": [
@@ -31,7 +34,10 @@
     ],
     "top_level_project_dirs": [
       "ops",
-      "PLAN"
+      "polyrepo_workspace",
+      "PLAN",
+      "IMPLEMENT",
+      "references"
     ],
     "extra_paths": []
   },
@@ -49,7 +55,8 @@
       "read .workspace/docs/review_workspace_instructions.md for the full review workflow and output contract",
       "regenerate scaffolded files with .workspace/scripts/build_overrides.sh after scaffold or manifest changes",
       "use the project review contract under .workspace/templates/reviews",
-      "treat ops/control_plane/dom0/asset-control-model as vendored reference material for self-contained planning and archive output"
+      "treat bundled external repo data as archive payload, not implicit local dependencies",
+      "current bundled external repo data lives under ops/control_plane/dom0/asset-control-model and polyrepo_workspace"
     ]
   },
   "review_rules": {

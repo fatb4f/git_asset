@@ -1,0 +1,14 @@
+{
+  "kind": "bundled_external_data.vendor_meta.v1",
+  "source_path": "/home/_404/src/ops/control_plane/dom0/asset-control-model",
+  "bundle_path": "ops/control_plane/dom0/asset-control-model",
+  "copy_mode": "working_tree_subset",
+  "notes": [
+    "Bundled as external reference data for git_asset archive payloads.",
+    "Current bundle contains the selected JSON control artifacts used by the plan packet."
+  ],
+  "bundled_files": [
+    "proposal_register.v1.json",
+    "spec_draft.v1.json"
+  ]
+}

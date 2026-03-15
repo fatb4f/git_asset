@@ -1,0 +1,16 @@
+{
+  "kind": "bundled_external_data.vendor_meta.v1",
+  "source_path": "/home/_404/src/polyrepo_workspace",
+  "bundle_path": "polyrepo_workspace",
+  "source_head": "634eedd",
+  "copy_mode": "working_tree_excluding_git",
+  "notes": [
+    "Bundled as tightly coupled external repo data for git_asset archive payloads.",
+    "Includes the current working tree minus .git so local untracked D1 assets are preserved in the archive."
+  ],
+  "notable_untracked_paths": [
+    "instances/seed",
+    "schemas",
+    "scripts/validate_d1.py"
+  ]
+}

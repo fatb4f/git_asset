@@ -13,7 +13,8 @@ Regenerate scaffolded files with [build_overrides.sh](./.workspace/scripts/build
 - read .workspace/docs/review_workspace_instructions.md for the full review workflow and output contract
 - regenerate scaffolded files with .workspace/scripts/build_overrides.sh after scaffold or manifest changes
 - use the project review contract under .workspace/templates/reviews
-- treat ops/control_plane/dom0/asset-control-model as vendored reference material for self-contained planning and archive output
+- treat bundled external repo data as archive payload, not implicit local dependencies
+- current bundled external repo data lives under ops/control_plane/dom0/asset-control-model and polyrepo_workspace
 
 ## Review contract
 
