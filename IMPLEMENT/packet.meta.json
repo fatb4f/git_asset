@@ -1,6 +1,6 @@
 {
   "kind": "implement.packet.meta.v1",
-  "objective": "Bundle asset-control-model and polyrepo_workspace into git_asset and refresh archive artifacts",
+  "objective": "Seed the bounded polyrepo integration repo with shared scaffold assets and tools/json_tool",
   "parent_issue": "PLAN/README.md",
   "wt": "/home/_404/src/git_asset_worktree",
   "packet_path": "/home/_404/src/git_asset_worktree/IMPLEMENT/IMPLEMENT.md"

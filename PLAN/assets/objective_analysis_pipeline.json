@@ -1,0 +1,86 @@
+{
+  "kind": "semantic_objective_analysis_pipeline.v1",
+  "summary": "Treat D0:D5 as objectives, with D0 fixed as the pre-plan dependency-workflow and bounded integration-canvas objective. Then derive canonical ordering for D1:D5 through semantic analysis plus dependency/gap analysis, recursively reduce them into composable micro-deliverable sets, and use the last-round analysis artifacts as inputs to the PLAN skill.",
+  "objectives": [
+    {
+      "objective_id": "D0",
+      "title": "dependency-workflow toolchain composition",
+      "description": "Define the pre-plan workflow composed from SCIP, ast-grep, json-tool with CUE DAG validation, and networkx, plus a bounded non-authoritative integration repo that serves as the cross-repo indexing and validation canvas."
+    },
+    {
+      "objective_id": "D1",
+      "title": "ACM policy state space and required metadata-anchor schema",
+      "description": "Define the policy state space and the schema dictating required metadata anchors across manifests, schemas, and policy objects."
+    },
+    {
+      "objective_id": "D2",
+      "title": "ACM shaping contract",
+      "description": "Define how ACM is safely shaped through modularity, composability, adaptability, and policy object collection/hierarchy."
+    },
+    {
+      "objective_id": "D3",
+      "title": "polyrepo_workspace functionality and atomics",
+      "description": "Define desired workspace functionality and required atomics under ACM governance."
+    },
+    {
+      "objective_id": "D4",
+      "title": "git_asset requirements surface",
+      "description": "Define the constrained bootstrap/materialization requirements surface for git_asset."
+    },
+    {
+      "objective_id": "D5",
+      "title": "semantic ownership and policy-evaluation closure",
+      "description": "Define semantic ownership, reconciliation, controller split, and the policy evaluation DAG across ACM, polyrepo_workspace, and git_asset."
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "name": "treat_D0_to_D5_as_objectives",
+      "result": "The set is treated as an objective register, not as an execution-ready deliverable list."
+    },
+    {
+      "step": 2,
+      "name": "fix_D0_as_preplan_objective",
+      "result": "D0 is fixed first because semantic objective ordering depends on a defined dependency-workflow toolchain and bounded integration canvas."
+    },
+    {
+      "step": 3,
+      "name": "derive_canonical_ordering_for_D1_to_D5",
+      "result": "Canonical ordering for D1:D5 is derived through semantic analysis and dependency/gap analysis."
+    },
+    {
+      "step": 4,
+      "name": "reduce_to_micro_deliverable_sets",
+      "result": "Each ordered objective is reduced into composable sets of micro-deliverables."
+    },
+    {
+      "step": 5,
+      "name": "analyze_each_micro_set",
+      "result": "Each composable set receives the same semantic analysis plus dependency/gap analysis."
+    },
+    {
+      "step": 6,
+      "name": "use_last_round_analysis_as_plan_input",
+      "result": "The last-round set-analysis artifacts become the direct inputs to the PLAN skill."
+    },
+    {
+      "step": 7,
+      "name": "generate_per_set_plan_packets",
+      "result": "Individual PLAN artifacts are generated per composable set of micro-deliverables."
+    }
+  ],
+  "analysis_artifacts": [
+    "dependency_tool_workflow_spec",
+    "integration_repo_contract",
+    "objective_register",
+    "objective_semantic_analysis",
+    "objective_dependency_gap_analysis",
+    "canonical_objective_order",
+    "micro_deliverable_set_register",
+    "set_semantic_analysis",
+    "set_dependency_gap_analysis",
+    "per_set_plan_packets"
+  ],
+  "ordering_rule": "D0 is fixed first as the dependency-workflow and bounded integration-canvas objective. PLAN packets are downstream of recursive semantic/dependency analysis, not the first artifact emitted."
+}

@@ -1,9 +1,8 @@
 {
   "kind": "plan.packet.meta.v1",
-  "objective": "Package git_asset as a scaffold archive with manifest-backed review assets and bundled asset-control-model and polyrepo_workspace data",
+  "objective": "Referring to ACM policy-plane, devise a plan to implement a streamlined policy-first, poly-repository workspace with scaffolded repo bootstrapping",
   "failure_signatures": [
-    "git_asset has no committed project manifest or generated review assets",
-    "external asset-control-model and polyrepo_workspace data would be lost from a plain git archive"
+    "scaffold bootstrapping, policy-plane authority, and polyrepo workspace control remain split across repos with no single implementation sequence"
   ],
   "wt": "/home/_404/src/git_asset_worktree",
   "packet_path": "/home/_404/src/git_asset_worktree/PLAN/README.md",
